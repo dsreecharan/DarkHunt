@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+    <a-scene embedded arjs>
+      <!-- Replace with your poster model -->
+      <a-entity
+        gltf-model="url(poster.glb)"
+        position="0 0 -3"
+        scale="0.5 0.5 0.5"
+        onclick="window.open('https://forms.gle/JsvASZ389m7aTDYY6','_blank');"
+      >
+      </a-entity>
+
+      <a-marker-camera preset="hiro"></a-marker-camera>
+    </a-scene>
+  </body>
+</html>

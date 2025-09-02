@@ -91,11 +91,3 @@ QR → Camera → AR Poster → Google Form
 
 DarkHunt makes campaigns, events, and promotions interactive, engaging, and immersive 🎯
 
-pgsql
-Copy code
-
----
-
-✅ You can literally copy-paste this into a file named `README.md` in your DarkHunt repo.  
-
-Do you also want me to give you a **ready-to-copy `index.html` + folder structure** so you can make the

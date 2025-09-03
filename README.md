@@ -1,80 +1,96 @@
-🕵️ DarkHunt – AR QR Poster
+# 🕵️ DarkHunt – AR QR Poster
 
-DarkHunt is an AR-powered QR code project. When a user scans a QR code, their phone’s camera opens in the browser, detects a marker, and displays a 3D poster in augmented reality. Tapping the poster redirects them to a Google Form (useful for surveys, event registrations, or campaigns).
+![License](https://img.shields.io/badge/license-MIT-blue.svg)  
+![Tech](https://img.shields.io/badge/AR.js-AFrame-orange.svg)  
+![Platform](https://img.shields.io/badge/Platform-WebAR-green.svg)
 
-🚀 Features
+**DarkHunt** is an **AR-powered QR code project** that brings posters to life.  
+Scanning the QR opens the phone’s camera in the browser, detects a marker, and displays a **3D poster in augmented reality**.  
+Tapping the poster redirects users to a **Google Form** (ideal for surveys, event registrations, or campaigns).
 
-Scan QR → launch AR in the browser (no app required).
+---
 
-Detects a marker (Hiro marker).
+## ✨ Features
+- 📱 **No App Required** → Works directly in the browser  
+- 🎯 **Marker Detection** → Uses Hiro marker  
+- 🖼️ **3D Poster Rendering** → Loads `.glb` model in AR  
+- 🔗 **Clickable Poster** → Redirects to a Google Form  
+- 🌐 **Cross-Platform** → Works on Android Chrome & iOS Safari  
 
-Displays a 3D poster/model in AR.
+---
 
-Tap the 3D poster → redirects to a Google Form.
+## 🛠️ Tech Stack
+- [A-Frame](https://aframe.io/) → 3D/VR rendering  
+- [AR.js](https://github.com/AR-js-org/AR.js/) → WebAR support  
+- HTML + JavaScript → Core setup  
+- [Netlify](https://www.netlify.com/) / GitHub Pages → Free hosting  
+- QR Code Generator → User entry point  
 
-Works on most modern smartphones (Android Chrome & iOS Safari).
+---
 
-🛠️ Tech Stack
-
-A-Frame
-→ 3D/VR rendering framework.
-
-AR.js
-→ Lightweight WebAR library.
-
-HTML + JavaScript → Base project setup.
-
-Netlify → Free & easy hosting.
-
-QR Code Generator → Shareable entry point.
-
-📂 Project Structure
+## 📂 Project Structure
+```
 DarkHunt/
-├── index.html # Main AR page
-├── poster.glb # 3D poster model (to be added by user)
-└── README.md # Project documentation
+├── index.html     # Main AR page
+├── poster.glb     # 3D poster model (to be added by user)
+└── README.md      # Project documentation
+```
 
-⚙️ Setup & Deployment
+---
 
-Clone the repository:
+## ⚙️ Setup & Deployment
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/DarkHunt.git
+   cd DarkHunt
+   ```
 
-git clone https://github.com/yourusername/DarkHunt.git
-cd DarkHunt
+2. **Add your 3D poster model**
+   - Place `poster.glb` inside the project folder.  
 
-Add your 3D model (poster.glb) into the project folder.
+3. **Update Google Form link**
+   - Open `index.html`  
+   - Replace the placeholder form URL with your own.  
 
-Update the Google Form link inside index.html.
+4. **Deploy the project**
+   - Recommended: [Netlify](https://www.netlify.com/) (drag & drop)  
+   - Alternative: GitHub Pages  
 
-Deploy on Netlify
-or GitHub Pages.
+5. **Generate a QR code**
+   - Point it to your hosted URL.  
 
-Generate a QR code pointing to your hosted URL.
+6. **Share the QR code**
+   - Print or distribute it → users scan and launch DarkHunt instantly!  
 
-Share or print the QR code → users can scan and launch DarkHunt.
+---
 
-🎯 Usage
+## 🎯 Usage
+1. Scan the QR code → Browser requests camera permission.  
+2. Point the camera at the **Hiro marker**  
+   - [Download marker here](https://ar-js-org.github.io/AR.js/three.js/examples/marker-training/examples/generator.html).  
+3. A **3D poster** appears anchored on the marker.  
+4. Tap the poster → Opens your **Google Form** in a new tab.  
 
-Scan the QR code → browser opens with camera.
+---
 
-Point camera at the Hiro marker (download marker
-).
+## 🔮 Future Improvements
+- ✅ Markerless AR support  
+- ✅ Animated & interactive posters  
+- ✅ Multiple posters → different form links  
+- ✅ Analytics for scans & submissions  
 
-A 3D poster appears anchored on the marker.
+---
 
-Tap the poster → opens Google Form in new tab.
+## 📸 Demo Flow
+```
+QR → Camera → AR Poster → Google Form
+```
 
-🔮 Future Improvements
+DarkHunt makes **event promotion, campaigns, and surveys** more **interactive, fun, and engaging 🎯**
 
-Markerless AR support.
+---
 
-Interactive posters (animations, hover effects).
+## 📄 License
+This project is licensed under the **MIT License** – feel free to use and adapt.
 
-Multiple posters linked to different forms.
-
-Analytics for QR scans and form submissions.
-
-📸 Demo Flow
-
-QR → Camera → AR Poster → Google Form.
-
-DarkHunt makes event promotion and campaigns interactive, fun, and engaging 🎯.
+---

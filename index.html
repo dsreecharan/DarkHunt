@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>DarkHunt AR Poster</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden">
     <a-scene
@@ -12,26 +16,38 @@
       embedded
       arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;"
     >
-      <!-- Floating 3D poster -->
-      <a-entity
-        id="poster"
-        gltf-model="url(poster.glb)"
-        position="0 0 -2"
-        scale="1 1 1"
-      ></a-entity>
-
-      <!-- Camera + cursor for taps -->
       <a-entity camera>
-        <a-cursor fuse="false" raycaster="objects: .clickable"></a-cursor>
+        <a-entity
+          cursor="fuse: false; rayOrigin: mouse"
+          raycaster="objects: .clickable"
+        ></a-entity>
+
+        <a-entity
+          gltf-model="url(poster.glb)"
+          position="0 0 -2"
+          scale="3 3 3"
+          animation="property: position; dir: alternate; dur: 3000; easing: easeInOutSine; loop: true; to: 0 0.2 -2"
+          animation__rotation="property: rotation; dir: alternate; dur: 4000; easing: easeInOutSine; loop: true; to: 0 10 0"
+        ></a-entity>
+
+        <a-plane
+          id="poster-link"
+          class="clickable"
+          position="0 0 -1.9"
+          width="2.5"
+          height="3.5"
+          material="opacity: 0; transparent: true"
+        ></a-plane>
       </a-entity>
     </a-scene>
 
     <script>
-      const poster = document.querySelector("#poster");
-      poster.classList.add("clickable");
-      poster.addEventListener("click", () => {
+      const linkPlane = document.querySelector("#poster-link");
+      function openForm() {
         window.open("https://forms.gle/JsvASZ389m7aTDYY6", "_blank");
-      });
+      }
+      linkPlane.addEventListener("click", openForm);
+      linkPlane.addEventListener("touchstart", openForm);
     </script>
   </body>
 </html>

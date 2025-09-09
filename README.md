@@ -11,8 +11,7 @@ Tapping the poster redirects users to a **Google Form** (ideal for surveys, even
 ---
 
 ## ✨ Features
-- 📱 **No App Required** → Works directly in the browser  
-- 🎯 **Marker Detection** → Uses Hiro marker  
+- 📱 **No App Required** → Works directly in the browser
 - 🖼️ **3D Poster Rendering** → Loads `.glb` model in AR  
 - 🔗 **Clickable Poster** → Redirects to a Google Form  
 - 🌐 **Cross-Platform** → Works on Android Chrome & iOS Safari  
@@ -65,16 +64,13 @@ DarkHunt/
 ---
 
 ## 🎯 Usage
-1. Scan the QR code → Browser requests camera permission.  
-2. Point the camera at the **Hiro marker**  
-   - [Download marker here](https://ar-js-org.github.io/AR.js/three.js/examples/marker-training/examples/generator.html).  
-3. A **3D poster** appears anchored on the marker.  
-4. Tap the poster → Opens your **Google Form** in a new tab.  
+1. Scan the QR code → Browser requests camera permission.
+2. A **3D poster** appears anchored on the marker.  
+3. Tap the poster → Opens your **Google Form** in a new tab.  
 
 ---
 
-## 🔮 Future Improvements
-- ✅ Markerless AR support  
+## 🔮 Future Improvements 
 - ✅ Animated & interactive posters  
 - ✅ Multiple posters → different form links  
 - ✅ Analytics for scans & submissions  
